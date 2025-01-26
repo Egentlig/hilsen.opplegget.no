@@ -17,15 +17,9 @@
         const quotes = document.querySelector("#quotes");
 
         try {
-            //const response = await fetch("https://api.opplegget.no/twitch/user/artful-egentlig/v1/greeting");
+            const response = await fetch("https://api.opplegget.no/twitch/user/artful-egentlig/v1/greeting");
 
-            // const json = await response.json();
-            const json = [{
-                "username": "Artful1985",
-                "channel": "Myrland",
-                "message": "JÆVLA PROPELL EGENTLIG",
-                "created": "2025-02-01T00:00:00Z"
-            }];
+            const json = await response.json();
 
             json.forEach(greeting => {
                 const blockquote = document.createElement("blockquote");
